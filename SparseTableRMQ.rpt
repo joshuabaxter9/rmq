@@ -1,0 +1,75 @@
+==437423== Memcheck, a memory error detector
+==437423== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==437423== Using Valgrind-3.22.0.GIT and LibVEX; rerun with -h for copyright info
+==437423== Command: ./run-tests -rmq SparseTableRMQ
+==437423== Parent PID: 421700
+==437423== 
+==437423== Invalid read of size 8
+==437423==    at 0x404FA1: SparseTableRMQ::rmq(unsigned long, unsigned long) const (SparseTableRMQ.cpp:50)
+==437423==    by 0x4082CE: void (anonymous namespace)::runTests<SparseTableRMQ>(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, (anonymous namespace)::TestParameters const&) (RunTests.cpp:154)
+==437423==    by 0x4069EA: void (anonymous namespace)::testRMQ<SparseTableRMQ>((anonymous namespace)::TestParameters const&) (RunTests.cpp:179)
+==437423==    by 0x408E36: void std::__invoke_impl<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(std::__invoke_other, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:61)
+==437423==    by 0x408B42: std::enable_if<is_invocable_r_v<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>, void>::type std::__invoke_r<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:111)
+==437423==    by 0x407141: std::_Function_handler<void ((anonymous namespace)::TestParameters const&), void (*)((anonymous namespace)::TestParameters const&)>::_M_invoke(std::_Any_data const&, (anonymous namespace)::TestParameters const&) (std_function.h:290)
+==437423==    by 0x406BF8: std::function<void ((anonymous namespace)::TestParameters const&)>::operator()((anonymous namespace)::TestParameters const&) const (std_function.h:591)
+==437423==    by 0x406468: main (RunTests.cpp:268)
+==437423==  Address 0x4de1930 is 0 bytes after a block of size 16 alloc'd
+==437423==    at 0x4844627: operator new[](unsigned long) (vg_replace_malloc.c:725)
+==437423==    by 0x404C14: SparseTableRMQ::SparseTableRMQ(RMQEntry const*, unsigned long) (SparseTableRMQ.cpp:13)
+==437423==    by 0x4081E1: void (anonymous namespace)::runTests<SparseTableRMQ>(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, (anonymous namespace)::TestParameters const&) (RunTests.cpp:137)
+==437423==    by 0x4069EA: void (anonymous namespace)::testRMQ<SparseTableRMQ>((anonymous namespace)::TestParameters const&) (RunTests.cpp:179)
+==437423==    by 0x408E36: void std::__invoke_impl<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(std::__invoke_other, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:61)
+==437423==    by 0x408B42: std::enable_if<is_invocable_r_v<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>, void>::type std::__invoke_r<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:111)
+==437423==    by 0x407141: std::_Function_handler<void ((anonymous namespace)::TestParameters const&), void (*)((anonymous namespace)::TestParameters const&)>::_M_invoke(std::_Any_data const&, (anonymous namespace)::TestParameters const&) (std_function.h:290)
+==437423==    by 0x406BF8: std::function<void ((anonymous namespace)::TestParameters const&)>::operator()((anonymous namespace)::TestParameters const&) const (std_function.h:591)
+==437423==    by 0x406468: main (RunTests.cpp:268)
+==437423== 
+==437423== Invalid read of size 8
+==437423==    at 0x405009: SparseTableRMQ::rmq(unsigned long, unsigned long) const (SparseTableRMQ.cpp:52)
+==437423==    by 0x4082CE: void (anonymous namespace)::runTests<SparseTableRMQ>(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, (anonymous namespace)::TestParameters const&) (RunTests.cpp:154)
+==437423==    by 0x4069EA: void (anonymous namespace)::testRMQ<SparseTableRMQ>((anonymous namespace)::TestParameters const&) (RunTests.cpp:179)
+==437423==    by 0x408E36: void std::__invoke_impl<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(std::__invoke_other, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:61)
+==437423==    by 0x408B42: std::enable_if<is_invocable_r_v<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>, void>::type std::__invoke_r<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:111)
+==437423==    by 0x407141: std::_Function_handler<void ((anonymous namespace)::TestParameters const&), void (*)((anonymous namespace)::TestParameters const&)>::_M_invoke(std::_Any_data const&, (anonymous namespace)::TestParameters const&) (std_function.h:290)
+==437423==    by 0x406BF8: std::function<void ((anonymous namespace)::TestParameters const&)>::operator()((anonymous namespace)::TestParameters const&) const (std_function.h:591)
+==437423==    by 0x406468: main (RunTests.cpp:268)
+==437423==  Address 0x4de19c8 is 0 bytes after a block of size 8 alloc'd
+==437423==    at 0x4844627: operator new[](unsigned long) (vg_replace_malloc.c:725)
+==437423==    by 0x404D29: SparseTableRMQ::SparseTableRMQ(RMQEntry const*, unsigned long) (SparseTableRMQ.cpp:21)
+==437423==    by 0x4081E1: void (anonymous namespace)::runTests<SparseTableRMQ>(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, (anonymous namespace)::TestParameters const&) (RunTests.cpp:137)
+==437423==    by 0x4069EA: void (anonymous namespace)::testRMQ<SparseTableRMQ>((anonymous namespace)::TestParameters const&) (RunTests.cpp:179)
+==437423==    by 0x408E36: void std::__invoke_impl<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(std::__invoke_other, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:61)
+==437423==    by 0x408B42: std::enable_if<is_invocable_r_v<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>, void>::type std::__invoke_r<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:111)
+==437423==    by 0x407141: std::_Function_handler<void ((anonymous namespace)::TestParameters const&), void (*)((anonymous namespace)::TestParameters const&)>::_M_invoke(std::_Any_data const&, (anonymous namespace)::TestParameters const&) (std_function.h:290)
+==437423==    by 0x406BF8: std::function<void ((anonymous namespace)::TestParameters const&)>::operator()((anonymous namespace)::TestParameters const&) const (std_function.h:591)
+==437423==    by 0x406468: main (RunTests.cpp:268)
+==437423== 
+==437423== 
+==437423== Process terminating with default action of signal 6 (SIGABRT): dumping core
+==437423==    at 0x4C75134: __pthread_kill_implementation (pthread_kill.c:44)
+==437423==    by 0x4C1D63D: raise (raise.c:26)
+==437423==    by 0x4C058FE: abort (abort.c:79)
+==437423==    by 0x405074: (anonymous namespace)::abortProgram() (RunTests.cpp:29)
+==437423==    by 0x40836B: void (anonymous namespace)::runTests<SparseTableRMQ>(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, (anonymous namespace)::TestParameters const&) (RunTests.cpp:166)
+==437423==    by 0x4069EA: void (anonymous namespace)::testRMQ<SparseTableRMQ>((anonymous namespace)::TestParameters const&) (RunTests.cpp:179)
+==437423==    by 0x408E36: void std::__invoke_impl<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(std::__invoke_other, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:61)
+==437423==    by 0x408B42: std::enable_if<is_invocable_r_v<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>, void>::type std::__invoke_r<void, void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&>(void (*&)((anonymous namespace)::TestParameters const&), (anonymous namespace)::TestParameters const&) (invoke.h:111)
+==437423==    by 0x407141: std::_Function_handler<void ((anonymous namespace)::TestParameters const&), void (*)((anonymous namespace)::TestParameters const&)>::_M_invoke(std::_Any_data const&, (anonymous namespace)::TestParameters const&) (std_function.h:290)
+==437423==    by 0x406BF8: std::function<void ((anonymous namespace)::TestParameters const&)>::operator()((anonymous namespace)::TestParameters const&) const (std_function.h:591)
+==437423==    by 0x406468: main (RunTests.cpp:268)
+==437423== 
+==437423== HEAP SUMMARY:
+==437423==     in use at exit: 75,432 bytes in 18 blocks
+==437423==   total heap usage: 50,019 allocs, 50,001 frees, 955,436 bytes allocated
+==437423== 
+==437423== LEAK SUMMARY:
+==437423==    definitely lost: 0 bytes in 0 blocks
+==437423==    indirectly lost: 0 bytes in 0 blocks
+==437423==      possibly lost: 0 bytes in 0 blocks
+==437423==    still reachable: 75,432 bytes in 18 blocks
+==437423==         suppressed: 0 bytes in 0 blocks
+==437423== Reachable blocks (those to which a pointer was found) are not shown.
+==437423== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==437423== 
+==437423== For lists of detected and suppressed errors, rerun with: -s
+==437423== ERROR SUMMARY: 2000002 errors from 2 contexts (suppressed: 0 from 0)
